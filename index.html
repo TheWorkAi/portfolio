@@ -123,6 +123,17 @@
     /* WRAPPER */
     .wrap { position: relative; z-index: 1; }
 
+    /* AVATAR */
+    .avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; font-weight: 800; color: #fff;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 0 0 4px rgba(0,200,150,0.15);
+    }
+
     /* HERO */
     .hero {
       max-width: 800px;
@@ -379,6 +390,7 @@
   <div class="wrap">
 
     <div class="hero">
+      <div class="avatar">AS</div>
       <div class="badge">
         <span class="badge-dot"></span>
         Available for freelance
@@ -388,6 +400,7 @@
       <div class="cta-row">
         <a href="#contact" class="btn btn-primary">Hire Me →</a>
         <a href="#projects" class="btn btn-glass">See My Work</a>
+        <a href="https://github.com/TheWorkAi" target="_blank" class="btn btn-glass">GitHub ↗</a>
       </div>
     </div>
 
@@ -435,7 +448,7 @@
 
         <div class="project-card">
           <h3>Office Automation Scheduler</h3>
-          <p>PyQt6 desktop app that fires VBA macros on a schedule, manages shift handovers, sends Telegram notifications, and generates AI-summarised digests. Includes encrypted password storage and a live heartbeat display.</p>
+          <p>PyQt6 desktop app that replaced a fully manual shift-management process. Fires VBA macros on schedule, auto-generates shift handover reports, pushes Telegram alerts, and produces AI-summarised team digests every 15 minutes. Encrypted credential storage, live heartbeat display, zero manual intervention required.</p>
           <div class="tags">
             <span class="tag-pill">Python</span>
             <span class="tag-pill">PyQt6</span>
@@ -445,8 +458,8 @@
         </div>
 
         <div class="project-card">
-          <h3>IEX Smart Updater</h3>
-          <p>Screen automation tool that reads an Excel schedule and automatically updates workforce management timelines in NICE IEX. Uses pixel-colour pattern recognition to locate and edit Break/Lunch blocks without manual input.</p>
+          <h3>IEX Workforce Management Updater</h3>
+          <p>Eliminated manual timeline entry in NICE IEX entirely. Reads an Excel schedule and uses pixel-colour pattern recognition to locate, identify, and edit Break/Lunch blocks across multiple agent timelines — zero clicks required per update cycle.</p>
           <div class="tags">
             <span class="tag-pill">Python</span>
             <span class="tag-pill">PyAutoGUI</span>
@@ -457,7 +470,7 @@
 
         <div class="project-card">
           <h3>Intraday Stock Screener</h3>
-          <p>Automated screener for NSE stocks and crypto that runs on 15-minute candles. Applies RSI, MACD, and ATR signals to surface high-probability setups, then fetches live news for matched tickers.</p>
+          <p>Screens 50+ NSE stocks and 10 crypto pairs every 15 minutes. Applies RSI, MACD, and ATR signals to surface high-probability setups, then auto-fetches live news for matched tickers — replacing hours of manual chart-watching.</p>
           <div class="tags">
             <span class="tag-pill">Python</span>
             <span class="tag-pill">pandas</span>
