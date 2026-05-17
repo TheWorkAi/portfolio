@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,15 +27,15 @@
     }
 
     [data-theme="light"] {
-      --bg: #f4f4f9;
-      --surface: rgba(0,0,0,0.04);
-      --surface-hover: rgba(0,0,0,0.07);
-      --border: rgba(0,0,0,0.09);
+      --bg: #f0f4ff;
+      --surface: rgba(255,255,255,0.7);
+      --surface-hover: rgba(255,255,255,0.9);
+      --border: rgba(0,0,0,0.08);
       --text: #111118;
-      --muted: #666;
-      --nav-bg: rgba(244,244,249,0.88);
-      --glow: rgba(0,200,150,0.08);
-      --card-bg: rgba(0,0,0,0.02);
+      --muted: #5a5a72;
+      --nav-bg: rgba(240,244,255,0.88);
+      --glow: rgba(0,200,150,0.12);
+      --card-bg: rgba(255,255,255,0.6);
     }
 
     html { scroll-behavior: smooth; }
@@ -346,6 +346,13 @@
 </head>
 <body>
 
+  <!-- BACKGROUND BLOBS -->
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;">
+    <div style="position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(0,200,150,.18),transparent 70%);top:-200px;left:-180px;filter:blur(40px);"></div>
+    <div style="position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.14),transparent 70%);bottom:-100px;right:-150px;filter:blur(40px);"></div>
+    <div style="position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.1),transparent 70%);top:45%;left:55%;filter:blur(50px);"></div>
+  </div>
+
   <div id="progress"></div>
 
   <nav>
@@ -355,7 +362,7 @@
       <a href="#projects" class="nav-link">Projects</a>
       <a href="#contact" class="nav-link">Contact</a>
       <a href="mailto:singh.aditya.1work@gmail.com" class="nav-link" style="color:var(--accent);">singh.aditya.1work@gmail.com</a>
-      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">☀ Light</button>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
     </div>
   </nav>
 
@@ -505,6 +512,8 @@
     if (saved) {
       document.documentElement.setAttribute('data-theme', saved);
       document.getElementById('themeBtn').textContent = saved === 'dark' ? '☀ Light' : '🌙 Dark';
+    } else {
+      document.getElementById('themeBtn').textContent = '🌙 Dark';
     }
 
     // Scroll progress bar
